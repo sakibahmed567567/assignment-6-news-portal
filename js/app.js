@@ -2,19 +2,20 @@ const loadData = () => {
     const url = `https://openapi.programming-hero.com/api/news/categories`
     fetch(url)
         .then(res => res.json())
-        .then(data => displayData(data.data))
+        //.then(data => console.log(data.data.news_category))
+        .then(data => displayData(data.data.news_category))
 }
 
 const displayData = newsOptions => {
-    const allNewsUl = document.getElementById('all-news-Ul');
+    const allNewsUl = document.getElementById('all-news-ul');
     newsOptions.forEach(news => {
         const newsLi = document.createElement('li');
         newsLi.classList.add('all-news-li');
         newsLi.innerHTML = `
-        <a href="" class="all-news-li text-muted fw-bold" style="text-decoration: none;"> ${news.catagory_name}</a>
+        <a href="" class="text-muted fw-bold" style="text-decoration: none;"> ${news.category_name}</a>
         `;
-        allNewsUl.appendChild(newsLi)
+        allNewsUl.appendChild(newsLi);
     });
-}
+};
 
-loadData();
+//loadData();

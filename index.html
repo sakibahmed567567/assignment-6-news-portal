@@ -26,7 +26,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a style="color:#5D5FEF;" class="nav-link active fw-bold" aria-current="page" href="#">News</a>
+                        <a onclick="loadData()" style="color:#5D5FEF;" class="nav-link active fw-bold"
+                            aria-current="page" href="#">News</a>
                     </li>
                     <li class="nav-item ms-4 ">
                         <a class="nav-link active text-muted fw-bold" aria-current="page" href="#">Blog</a>
@@ -36,15 +37,20 @@
         </nav>
         <hr>
 
-        <div id="all-news-div">
-            <ul id="all-news-ul" style="display: flex;
-            justify-content:space-around;
-            list-style-type:none;">
-                <!-- <li class="all-news-li"><a href="" class="all-news-anchor text-muted fw-bold" style="text-decoration: none;"> Inbox</a></li> -->
-            </ul>
-        </div>
+
     </header>
 
+    <main>
+        <section class="container">
+            <div id="all-news-div">
+                <ul id="all-news-ul" style="display: flex;
+                justify-content:space-around;
+                list-style-type:none;">
+                    <!-- <li class="all-news-li"><a href="" class="all-news-anchor text-muted fw-bold" style="text-decoration: none;"> Inbox</a></li> -->
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
     "></script>
